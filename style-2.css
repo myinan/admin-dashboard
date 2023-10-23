@@ -10,9 +10,9 @@
 }
 
 :root {
-    --sidebar-blue: rgb(94, 94, 255);
-    --header-white: rgb(238, 238, 238);
-    --main-gray: rgb(179, 174, 174);
+    --sidebar-blue: #3b82f6;
+    --header-white: #f1f5f9;
+    --main-gray: #d1d5db;
     font-family: roboto-regular;
 }
 
@@ -20,6 +20,11 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
+}
+
+
+button:hover {
+    cursor: pointer;
 }
 
 .sidebar {
@@ -31,6 +36,30 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+.sidebar > ul {
+    list-style: none;
+}
+
+.sidebar  a {
+    color: var(--header-white);
+    text-decoration: none;
+}
+
+.dashboard {
+    margin-top: 15px;
+    font-size: calc(2rem + 1vw);
+}
+
+.nav-first, .nav-second {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
 .header-main-container {
@@ -118,7 +147,7 @@ body {
     font-family: inherit;
     background-color: var(--sidebar-blue);
     color: var(--header-white);
-    width: calc(50px + 5vw);
+    width: calc(50px + 6vw);
     border: none;
     border-radius: calc(20px + 1vw);
     font-size: calc(15px + 1vw);
@@ -160,7 +189,7 @@ body {
     width: 350px;
     height: 250px;
     border-radius: 15px;
-    background-color: var(--header-white);
+    background: linear-gradient(to right, #fbbf24 2.8%, var(--header-white) 0%);
     padding: 1.5vw 1vw;
     display: flex;
     flex-direction: column;
@@ -179,9 +208,29 @@ body {
     font-size: 20px;
 }
 
+.project-text > p:nth-child(2) {
+    opacity: 0.6;
+}
+
 .project .project-buttons {
     margin-top: auto;
     align-self: flex-end;
+    display: flex;
+    gap: 10px;
+}
+
+.project-buttons button {
+    background-color: var(--header-white);
+    border: none;
+}
+
+.project-buttons button:hover {
+    cursor: pointer;
+}
+
+.project-buttons svg {
+    height: 25px;
+    width: 25px;
 }
 
 .main-right-section {
@@ -230,6 +279,10 @@ body {
     font-weight: bold;
 }
 
+.ann > p:nth-child(2) {
+    opacity: 0.6;
+}
+
 
 .main-trend img {
     height: 50px;
@@ -265,5 +318,6 @@ body {
 
 .trend .user-text {
     grid-area: 2 / 2 / 3 / 3;
+    opacity: 0.6;
 }
 
