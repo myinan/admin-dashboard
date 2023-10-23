@@ -10,9 +10,10 @@
 }
 
 :root {
-    --sidebar-blue: #3b82f6;
+    --sidebar-blue: #084c61;
     --header-white: #f1f5f9;
     --main-gray: #d1d5db;
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     font-family: roboto-regular;
 }
 
@@ -77,7 +78,7 @@ button:hover {
     grid-template-columns: 3fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-
+    box-shadow: var(--shadow-lg);
 }
 
 .header input {
@@ -194,7 +195,7 @@ button:hover {
     padding: 1.5vw 1vw;
     display: flex;
     flex-direction: column;
-
+    box-shadow: var(--shadow-lg);
 }
 
 .project-text {
@@ -267,6 +268,7 @@ button:hover {
     border-radius: 15px;
     padding: 5px 10px;
     margin: 0.5vw 1vw 0 0;
+    box-shadow: var(--shadow-lg);
 }
 
 .announcements .ann:not(:last-child) {
@@ -299,6 +301,7 @@ button:hover {
     background-color: var(--header-white);
     border-radius: 15px;
     margin: 0.5vw 1vw 0.5vw 0;
+    box-shadow: var(--shadow-lg);
 }
 
 .trend {
