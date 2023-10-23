@@ -49,6 +49,7 @@ button:hover {
 
 .dashboard {
     margin-top: 15px;
+    padding-right: 1vw;
     font-size: calc(2rem + 1vw);
 }
 
